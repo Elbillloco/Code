@@ -1,0 +1,28 @@
+body{
+    /*Fuente de la letra, los margenes y el color de fondo*/
+    font-family:fantasy;
+    margin: 40px;
+    background-color:blanchedalmond;
+        
+
+    h1{
+        color:aqua;
+        font-size:x-large
+    }
+    h2{
+    color: rgb(47, 0, 255);
+    }
+
+    .contenedor{
+        margin: 5px 5px 5px 5px;
+        padding: 10px;
+        background-color:rgb(128, 7, 114)
+        
+    }
+
+    .caja{
+        margin: 10px 10px 10px 10px;
+        padding: 20px;
+        background-color: #07942f;
+    }
+}
