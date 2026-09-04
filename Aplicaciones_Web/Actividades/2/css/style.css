@@ -67,3 +67,15 @@ p {
     height: 100%;
     border: 0;
 }
+
+.contenedorApariciones{
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(21, 2, 57);
+}
+
+.titulos{
+    font-size: 5cap ;
+    color: rgb(109, 6, 6);
+    margin-left:230px;
+}
