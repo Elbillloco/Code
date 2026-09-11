@@ -26,4 +26,6 @@ btnCalcular.addEventListener("click", function(){
 
     result.textContent  = "La suma es " + suma;
 
+    s
+
 })

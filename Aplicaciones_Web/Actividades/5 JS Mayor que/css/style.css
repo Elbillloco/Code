@@ -1,0 +1,10 @@
+h1{
+    font-family:"Bayonetta Regular";
+    color: azure;
+}
+
+.color_resultado{
+    margin: 5px;
+    padding:5px;
+    background-color: rgb(76, 14, 14);
+}
