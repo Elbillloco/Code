@@ -1,4 +1,4 @@
-const btnCalcular = document.getElementById("calcular")
+const btnCalcular = document.getElementById("btnCalcular")
 
 btnCalcular.addEventListener("click", function(){
 
