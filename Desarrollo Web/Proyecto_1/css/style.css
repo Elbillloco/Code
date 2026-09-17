@@ -1,0 +1,16 @@
+.titulo{
+    font-family: 'Bayonetta Regular';
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1{
+    color: rgb(132, 23, 98);
+}
+h2{
+    color: rgb(46, 55, 120);
+}
+h3{
+    color: rgb(132, 23, 30);
+}
+
