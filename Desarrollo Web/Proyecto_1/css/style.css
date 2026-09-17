@@ -1,7 +1,13 @@
+body{
+    background-image: url("../source/bayo3.jpg");
+}
 .titulo{
     font-family: 'Bayonetta Regular';
     text-align: center;
     text-transform: uppercase;
+    text-shadow: 3px 3px 0 #ffffff;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
 }
 
 h1{
@@ -12,5 +18,8 @@ h2{
 }
 h3{
     color: rgb(132, 23, 30);
+}
+form{
+    text-align: center;
 }
 
