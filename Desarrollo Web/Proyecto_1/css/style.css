@@ -1,25 +1,76 @@
+:root{
+    --color_blanco: #ffffff;
+    --color_oscuro:#212121;
+    --color_primario: #660354;
+    --color_secundario: #011c88fe;
+    --color_terceario: #900000;
+    --colorParrafos: #75eaea;
+    --fuente: "Bayonetta Regular";
+    --textoAnchoL: lighter;
+    --textoAnchoBdr: bolder;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+/*Estilos Globales*/
 body{
     background-image: url("../source/bayo3.jpg");
-}
-.titulo{
-    font-family: 'Bayonetta Regular';
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Oswald';
+    color: var(--colorParrafos);
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 3px 3px 0 #ffffff;
     margin: 5px 5px 5px 5px;
     padding: 5px 5px 5px 5px;
 }
 
-h1{
-    color: rgb(132, 23, 98);
+/*Selector de Clases*/
+h1.titulo_freelancer{
+    color: var(--color_primario);
+    font-size:3.8rem;
+    font-family: var(--fuente);
+    font-weight: var(--textoAnchoL);
 }
+
+span.subtitulo_freelancer{
+    font-size: 2rem;
+    font-family: var(--fuente);
+}
+
+p.derechos{
+    font-family: var(--fuente);
+    color:rgb(255, 255, 255);
+    font-weight: var(--textoAnchoL);
+
+}
+
+h2.titulo_contacto{
+    color:  var(--color_blanco);
+    font-family: var(--fuente);
+    font-weight: var(--textoAnchoL);
+}
+
+/*Etiquetas General*/
 h2{
-    color: rgb(46, 55, 120);
+    color:  var(--color_blanco);
+    font-family: var(--fuente);
+    font-weight: var(--textoAnchoL);
+
 }
 h3{
-    color: rgb(132, 23, 30);
+   color: var(--color_blanco);
+    font-family: var(--fuente);
+    font-weight: var(--textoAnchoL);
+
 }
+
 form{
     text-align: center;
+    color: var(--color_blanco);
+    font-weight: var(--textoAnchoBdr);
+
 }
 

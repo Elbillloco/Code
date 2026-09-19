@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseñador Freelancer</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link href="css/normalize.css" rel="preload" >
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="css/style.css" as="style">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -13,7 +20,7 @@
     <header>
     <div>
         
-        <h1 class="titulo">Roberth Ali Freelancer</h1>
+        <h1 class="titulo_freelancer">Roberth Ali <span class="subtitulo_freelancer">Freelancer</span></h1>
 
     </div>
     </header>
@@ -120,7 +127,7 @@
     <section>
     <div>
         
-        <h2 class="titulo">Contacto</h2>
+        <h2 class="titulo_contacto">Contacto</h2>
 
     </div>
     </section>
@@ -159,7 +166,7 @@
     </form>
 
     <footer>
-        <p>Todos los derechos reservados. Roberth Ali FreeLancer.</p>
+        <p class="derechos">Todos los derechos reservados. Roberth Ali FreeLancer.</p>
     </footer>
 
 </body>
