@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Semáforo</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="css/style.css" as="style">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1 class="titulo_freelancer">Simulador de <span class="subtitulo_freelancer">Semáforo</span></h1>
+        </div>
+    </header>
+
+    <main class="contenedor_principal">
+
+        <!-- Vista del Semáforo -->
+        <section class="seccion_semaforo">
+            <div class="semaforo_cuerpo">
+                <div id="luzRojo" class="luz rojo"></div>
+                <div id="luzAmarillo" class="luz amarillo"></div>
+                <div id="luzVerde" class="luz verde"></div>
+            </div>
+        </section>
+
+        <!-- Panel de Controles -->
+        <section class="seccion_controles">
+            <h2 class="titulo">Modo Automático</h2>
+            <div class="bloque_botones">
+                <button id="btnAutoStart" class="btn btn_inicio">Iniciar Automático</button>
+                <button id="btnAutoStop" class="btn btn_detener">Detener Automático</button>
+            </div>
+
+            <h2 class="titulo">Modo Manual</h2>
+            <div class="bloque_botones">
+                <button id="btnVerde" class="btn btn_verde">Verde</button>
+                <button id="btnAmarillo" class="btn btn_amarillo">Amarillo</button>
+                <button id="btnRojo" class="btn btn_rojo">Rojo</button>
+            </div>
+        </section>
+
+        <!-- Panel de Contadores -->
+        <section class="seccion_contadores">
+            <h2 class="titulo">Contador de Encendidos</h2>
+            <div class="tarjetas_contador">
+                <div class="tarjeta tarjeta_verde">
+                    <h3>Verde</h3>
+                    <p id="cntVerde">0</p>
+                </div>
+                <div class="tarjeta tarjeta_amarilla">
+                    <h3>Amarillo</h3>
+                    <p id="cntAmarillo">0</p>
+                </div>
+                <div class="tarjeta tarjeta_roja">
+                    <h3>Rojo</h3>
+                    <p id="cntRojo">0</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="derechos">Todos los derechos reservados. Roberth Ali FreeLancer.</p>
+    </footer>
+
+    <script src="js/semaforo.js"></script>
+</body>
+</html>
