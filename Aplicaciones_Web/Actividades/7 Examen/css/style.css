@@ -1,10 +1,6 @@
 :root{
     --color_blanco: #ffffff;
     --color_oscuro: #212121;
-    --color_primario: #660354;
-    --color_secundario: #011c88fe;
-    --color_terceario: #900000;
-    --colorParrafos: #75eaea;
     
     --color_verde: #00ff66;
     --color_amarillo: #ffcc00;
@@ -15,101 +11,73 @@
     --textoAnchoBdr: bolder;
 }
 
+
 html{
     font-size: 62.5%;
 }
 
-/* Estilos Globales */
 body{
     background-color: var(--color_oscuro);
-    font-size: 1.6rem; /* 1rem = 10px */
+    font-size: 1.6rem;
     font-family: var(--fuente);
-    color: var(--colorParrafos);
+    color: var(--color_blanco);
     text-align: center;
     text-transform: uppercase;
     margin: 5px;
     padding: 5px;
 }
 
-/* Selector de Clases de Encabezado */
-h1.titulo_freelancer{
+h1.titulo_semaforo{
     color: var(--color_blanco);
     font-size: 3.8rem;
-    font-family: var(--fuente);
     font-weight: var(--textoAnchoL);
 }
 
-span.subtitulo_freelancer{
-    color: var(--color_primario);
-    font-size: 2rem;
-    font-family: var(--fuente);
-}
-
-h2.titulo{
+h2.titulo_contador{
     color: var(--color_blanco);
-    font-family: var(--fuente);
-    font-weight: var(--textoAnchoL);
-    margin-top: 2rem;
-}
-
-h3{
-    color: var(--color_blanco);
-    font-family: var(--fuente);
+    font-size: 3.8rem;
     font-weight: var(--textoAnchoL);
 }
 
-p.derechos{
-    font-family: var(--fuente);
-    color: var(--color_blanco);
-    font-weight: var(--textoAnchoL);
-    margin-top: 3rem;
-}
-
-/* Contenedor Principal */
-.contenedor_principal {
+.contenedor_principal{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
 }
 
-/* Estructura del Semáforo */
-.semaforo_cuerpo {
-    background-color: #111;
-    border: 4px solid #444;
+.semaforo_cuerpo{
+    background-color: #000000;
+    border: 4px #5e5d5d;
     border-radius: 3rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
-.luz {
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    opacity: 0.2; /* Luz apagada por defecto */
-    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+.luz{
+   width: 8rem;
+   height: 8rem;
+   border-radius: 50%;
+   opacity: 0.2;
+   transition: opacity 0.3s ease, box-shadow 0.3s ease; 
 }
 
-.luz.rojo { background-color: var(--color_rojo); }
-.luz.amarillo { background-color: var(--color_amarillo); }
-.luz.verde { background-color: var(--color_verde); }
+.luz.rojo{background-color: var(--color_rojo);}
+.luz.amarillo{background-color: var(--color_amarillo);}
+.luz.verde{background-color: var(--color_verde);}
 
-/* Luces Encendidas */
-.luz.encendido {
+.luz.encendido{
     opacity: 1;
 }
 
-.luz.rojo.encendido { box-shadow: 0 0 25px var(--color_rojo); }
-.luz.amarillo.encendido { box-shadow: 0 0 25px var(--color_amarillo); }
-.luz.verde.encendido { box-shadow: 0 0 25px var(--color_verde); }
+.luz.rojo.encendido{box-shadow: 0 0 25px var(--color_rojo);}
+.luz.amarillo.encendido{box-shadow: 0 0 25px var(--color_amarillo);}
+.luz.verde.encendido{box-shadow: 0 0 25px var(--color_verde);}
 
-/* Estilos de Botones */
-.bloque_botones {
+.bloque_botones{
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -117,17 +85,16 @@ p.derechos{
     margin-bottom: 1.5rem;
 }
 
-.btn {
-    font-family: var(--fuente);
-    font-size: 1.6rem;
-    font-weight: var(--textoAnchoBdr);
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    color: var(--color_blanco);
-    text-transform: uppercase;
-    transition: transform 0.1s ease;
+.btn{
+   font-family: var(--fuente); 
+   font-size: 1.6rem;
+   cursor:pointer;
+   color: var(--color_blanco);
+   text-transform: uppercase;
+   transition: transform 0.1s ease;
+   border-radius: 1rem;
+   padding: 2rem;
+   margin: 2rem;
 }
 
 .btn:active {
@@ -140,33 +107,21 @@ p.derechos{
 .btn_amarillo { background-color: #b88600; }
 .btn_rojo { background-color: #aa0000; }
 
-/* Contadores */
-.tarjetas_contador {
+.contador_general{
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-}
-
-.tarjeta {
-    background-color: #2b2b2b;
-    border: 1px solid #444;
-    border-radius: 0.8rem;
-    padding: 1rem 2.5rem;
-    min-width: 100px;
-}
-
-.tarjeta h3 {
-    margin: 0;
-}
-
-.tarjeta p {
-    font-size: 2.8rem;
-    font-weight: var(--textoAnchoBdr);
-    margin: 0.5rem 0 0 0;
     color: var(--color_blanco);
 }
 
-.tarjeta_verde h3 { color: var(--color_verde); }
-.tarjeta_amarilla h3 { color: var(--color_amarillo); }
-.tarjeta_roja h3 { color: var(--color_rojo); }
+.contador{
+    background-color: #000000;
+    border: 1px #000000;
+    border-radius: 1rem;
+    padding: 1rem 2.5rem;
+}
+
+.contador_verde h3 { color: var(--color_verde); }
+.contador_amarillo h3 { color: var(--color_amarillo); }
+.contador_rojo h3 { color: var(--color_rojo); }
