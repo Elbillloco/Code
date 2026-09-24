@@ -1,10 +1,12 @@
-:root{
+:root{ /*Englobar estilo de todo el codigo en variables mas genericas*/
     --color_blanco: #ffffff;
-    --color_oscuro:#212121;
-    --color_primario: #660354;
+    --color_oscuro:#292929;
+    --color_primario: #910477;
     --color_secundario: #011c88fe;
     --color_terceario: #900000;
-    --colorParrafos: #75eaea;
+    --colorParrafos: #e3dede;
+    --colorPagina: #1c1c1c;
+    --colorBotones: #fff;
     --fuente: "Bayonetta Regular";
     --textoAnchoL: lighter;
     --textoAnchoBdr: bolder;
@@ -13,18 +15,55 @@
 
 html{
     font-size: 62.5%;
+    box-sizing: border-box; /*Normalizar el uso de los rem*/
+}
+
+*, *:before, *:after{
+    box-sizing: border-box;
 }
 
 /*Estilos Globales*/
 body{
-    background-image: url("../source/bayo3.jpg");
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Oswald';
     color: var(--colorParrafos);
+    background-color: var(--colorPagina);
     text-align: center;
     text-transform: uppercase;
-    margin: 5px 5px 5px 5px;
-    padding: 5px 5px 5px 5px;
+    margin: 5px 5px;
+    padding: 5px 5px;
+
+    background-image: linear-gradient(to top, var(--color_primario) 0%, var(--color_oscuro)100%);
+}
+
+.sombra{
+    -webkit-box-shadow: -19px 25px 24px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: -19px 25px 24px 0px rgba(0,0,0,0.35);
+    box-shadow: -19px 25px 24px 0px rgba(0,0,0,0.35);
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+    font-family: "Bayonetta Regular";
+    font-weight: var(--textoAnchoL);
+}
+
+form{
+    text-align: center;
+    color: var(--color_blanco);
+    font-weight: var(--textoAnchoBdr);
+
 }
 
 /*Selector de Clases*/
@@ -53,24 +92,122 @@ h2.titulo_contacto{
     font-weight: var(--textoAnchoL);
 }
 
-/*Etiquetas General*/
-h2{
-    color:  var(--color_blanco);
-    font-family: var(--fuente);
-    font-weight: var(--textoAnchoL);
-
-}
-h3{
-   color: var(--color_blanco);
-    font-family: var(--fuente);
-    font-weight: var(--textoAnchoL);
+/*Clases de barra de navegacion*/
+.contenedor_principal{
+    max-width: 120rem;
+    margin: 0 auto;
 
 }
 
-form{
-    text-align: center;
-    color: var(--color_blanco);
+.nav_bg{
+    background-color: var(--colorPagina);
+    padding: 2rem 2rem;
+    border-radius: 2rem;
+}
+
+.navegacion_principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.navegacion_principal a{
+    background-color: var(--color_blanco);
+    text-decoration: none;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+    color: #212121;
+    font-size: 1.7rem;
     font-weight: var(--textoAnchoBdr);
+}
+.navegacion_principal a:hover{
+    background-color: var(--color_primario);
+    color: var(--color_blanco);
+}
 
+.imagen_principal{
+    background-image: url("../source/bayo3.jpg");
+    margin-top: 3rem;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+    border-radius: 2rem;
+
+}
+
+.contenido-imagen_principal{
+    position: absolute;
+    background-color: rgba(24, 1, 21, 80%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+
+}
+
+.contenido-imagen_principal h2, p{
+    color: var(--color_blanco);
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icono{
+    width: 3rem;
+    height: 3rem;
+}
+
+.boton{
+    background-color: var(--colorBotones);
+    color: var(--colorPagina);
+    padding: 1rem 3rem;
+    margin: 1rem 1rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+
+    text-decoration: none;
+    font-weight: var(--textoAnchoBdr);
+    text-transform: uppercase;
+    width: 90%;
+    text-align: center;
+}
+
+.boton:hover{
+    background-color: var(--color_primario);
+    color: var(--color_blanco);
+}
+
+/*Media Querys para barra de navegacion principal*/
+@media (min-width: 768px){
+    .navegacion_principal{
+        flex-direction: row;
+    }
+    .navegacion_principal a{
+        padding: 1rem 1rem;
+    }
+    .boton{
+        width: auto;
+    }
+
+    body{
+    font-family: 'Courier New', Courier, monospace;
+    }
+
+}
+
+.contenedor_servicios{
+    background-color: var(--colorPagina);
+
+    padding: 0.01rem 0.01rem;
+    margin: 2rem 2rem;
+    border-radius: 2rem;
+    width: auto;
 }
 
