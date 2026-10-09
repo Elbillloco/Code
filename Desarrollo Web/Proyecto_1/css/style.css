@@ -159,7 +159,17 @@ h2.titulo_contacto{
     flex-direction: column;
     align-items: center;
 }
-.icono{
+
+.servicio .icono{
+    height: 8rem;
+    width: 8rem;
+    background-color: var(--color_blanco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ubicacion .icono{
     width: 3rem;
     height: 3rem;
 }
@@ -204,10 +214,41 @@ h2.titulo_contacto{
 
 .contenedor_servicios{
     background-color: var(--colorPagina);
-
+    
+    display: flex;
+    flex-direction: column;
     padding: 0.01rem 0.01rem;
     margin: 2rem 2rem;
     border-radius: 2rem;
     width: auto;
+}
+
+.contenedor_servicios .titulo_servicios{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.servicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.servicio {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    line-height: 2.5rem;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+@media (max-width: 768px){
+    .servicios{
+        flex-direction: column;
+    }
 }
 

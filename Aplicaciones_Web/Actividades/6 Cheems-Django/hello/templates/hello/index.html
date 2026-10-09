@@ -1,13 +1,49 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="../../../static/css/style.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'hello/css/style.css' %}" >
+
+    <title>Ordenes de trabajo</title>
 </head>
-<body>
-    <h1>Hello World</h1>
+<body">
+    <div class="caja_bienvenida">
+        <h1>Consulta de ordenes de trabajo</h1>
+
+        <div class="tabla">
+            <table>
+                <!-- tr table row-->
+                <thead>
+                    <tr class="texto_tabla">
+                        <th>Nombre</th>
+                        <th>Cuenta</th>
+                        <th>Perfil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="texto_tabla">
+                        <!--td table data-->
+                        <td>Julian Torres</td>
+                        <td>jtorres</td>
+                        <td>Administrador</td>
+                    </tr>
+                    <tr class="texto_tabla">
+                        <td>Roberth Amarillas</td>
+                        <td>ramarillas</td>
+                        <td>Administrador</td>
+                    </tr>
+                    <tr>
+                        <td>Bruno Diaz</td>
+                        <td>bdiaz</td>
+                        <td>Operador</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><!--Caja Bienvenida-->
+    
 </body>
 </html>
