@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,12 @@
 
     <title>Ordenes de trabajo</title>
 </head>
-<body">
+<body>
     <div class="caja_bienvenida">
         <h1>Consulta de ordenes de trabajo</h1>
 
         <div class="tabla">
-            <table>
+            <table class="tabla_datos">
                 <!-- tr table row-->
                 <thead>
                     <tr class="texto_tabla">
@@ -24,22 +24,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="texto_tabla">
-                        <!--td table data-->
-                        <td>Julian Torres</td>
-                        <td>jtorres</td>
-                        <td>Administrador</td>
-                    </tr>
-                    <tr class="texto_tabla">
-                        <td>Roberth Amarillas</td>
-                        <td>ramarillas</td>
-                        <td>Administrador</td>
-                    </tr>
+                    {% for user in users %}
                     <tr>
-                        <td>Bruno Diaz</td>
-                        <td>bdiaz</td>
-                        <td>Operador</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.account }}</td>
+                        <td>{{ user.profile.name|title }}</td>
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

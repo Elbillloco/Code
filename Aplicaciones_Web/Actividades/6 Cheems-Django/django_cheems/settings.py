@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'django_cheems.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'caracoldb',
+        'USER': 'root',
+        'PASSWORD': '11082005',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
