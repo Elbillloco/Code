@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Superpuesto</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* --- CONTENIDO PRINCIPAL --- */
+    /* Mantiene su posición independientemente del menú */
+    .main-content {
+      padding: 2rem;
+    }
+
+    .menu-toggle {
+      padding: 10px 18px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+
+    /* --- FONDO OSCURO DE SUPERPOSICIÓN (OVERLAY) --- */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 999; /* Justo debajo del menú */
+    }
+
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* --- MENÚ LATERAL SUPERPUESTO --- */
+    .sidebar-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100vh;
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 2rem 1.5rem;
+      box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+      
+      /* Saca el menú a la izquierda fuera de la pantalla */
+      transform: translateX(-100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      /* Se coloca por encima de todo el contenido */
+      z-index: 1000;
+    }
+
+    /* Estado cuando se despliega */
+    .sidebar-menu.active {
+      transform: translateX(0);
+    }
+
+    .sidebar-menu ul {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .sidebar-menu li {
+      margin-bottom: 1.2rem;
+    }
+
+    .sidebar-menu a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+
+    .sidebar-menu a:hover {
+      color: #38bdf8;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botón en la página principal -->
+  <main class="main-content">
+    <button class="menu-toggle" id="openMenu">Abrir Menú</button>
+    <h1>Título de la Página</h1>
+    <p>Este contenido permanece en su lugar y no se desplaza al abrir el menú.</p>
+  </main>
+
+  <!-- Capa oscura de fondo (opcional pero recomendada) -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Menú lateral colapsable -->
+  <nav class="sidebar-menu" id="sidebar">
+    <button class="close-btn" id="closeMenu">&times;</button>
+    <h2>Menú</h2>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- JavaScript mínimo para conmutar las clases -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const openMenuBtn = document.getElementById('openMenu');
+    const closeMenuBtn = document.getElementById('closeMenu');
+
+    function toggleMenu() {
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+
+    openMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+$kind: http-request
+name: Create User
+description: Creates a new user. Requires a JSON body with id, name, and account fields.
+url: http://127.0.0.1:8000/animal
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+        "id": 1,
+        "name": "Roberth",
+        "account": "roberth@example.com"
+    }
+order: 2000

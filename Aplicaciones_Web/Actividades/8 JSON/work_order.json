@@ -1,0 +1,15 @@
+{
+    "id": 4,
+    "title": "Base de datos",
+    "description": "Llamada de datos de la pagina hacia la base de datos",
+    "user": {
+        "id": 15,
+        "name": "Cereza Humbra",
+        "account": "CHumbra"
+    },
+    "history": [
+        {
+            "date": "2026-10-26T12:56"
+        }
+    ]
+}
