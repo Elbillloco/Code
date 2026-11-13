@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Perro",
+    "species": "Pug",
+    "description": "El perro hace guay"
+  },
+  {
+    "id": null,
+    "name": "Perro",
+    "species": "Perro",
+    "description": "guau"
+  },
+  {
+    "id": 0,
+    "name": "Perro",
+    "species": "Perro",
+    "description": "Guau"
+  }
+]

@@ -1,0 +1,11 @@
+$kind: http-request
+name: http://127.0.0.1:8000/user
+description: ""
+url: http://127.0.0.1:8000/user
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: '{"id": 1, "name": "Roberth", "account": "roberth@example.com"}'
+order: 4000
